@@ -1,6 +1,6 @@
 # Github-Finder
 
-This react project uses github api to search for github users, shows a list of users and a detail page of a single user with its "attributes". Class based components were used and later refactored with funcional components while using hooks.
+This react project uses github api to search for github users, shows a list of users and a detail page of a single user with its "attributes". Class based components were used and later refactored with funcional components while using hooks and context.
 
 ## Available Scripts
 
