@@ -1,5 +1,4 @@
 import {
-  SET_INIT_USERS,
   SEARCH_USERS,
   GET_USER,
   CLEAR_USERS,
@@ -11,13 +10,6 @@ import {
 
 export default (state, action) => {
   switch (action.type) {
-    case SET_INIT_USERS:
-      return {
-        ...state,
-        users: action.payload,
-        loading: false,
-      };
-
     case SEARCH_USERS:
       return {
         ...state,

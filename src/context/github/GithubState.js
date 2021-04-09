@@ -1,9 +1,8 @@
-import React, { useReducer, useEffect } from 'react';
+import React, { useReducer } from 'react';
 import axios from 'axios';
 import GithubContext from './githubContext';
 import GithubReducer from './githubReducer';
 import {
-  SET_INIT_USERS,
   SEARCH_USERS,
   GET_USER,
   CLEAR_USERS,
@@ -23,29 +22,6 @@ const GithubState = (props) => {
 
   const [state, dispatch] = useReducer(GithubReducer, initialState);
 
-  // Set initial Users
-  useEffect(() => {
-    const initialUsers = async () => {
-      console.log('initialUsers');
-      setLoading();
-
-      const res = await axios.get(
-        `https://api.github.com/users?
-      client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}
-      &client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
-      );
-
-      console.log(res.data.items);
-
-      // dispatch({
-      //   type: SET_INIT_USERS,
-      //   payload: res.data.items,
-      // });
-    };
-
-    initialUsers();
-  }, []);
-
   // Search Users
   const searchUsers = async (text) => {
     setLoading();
@@ -55,8 +31,6 @@ const GithubState = (props) => {
       client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}
       &client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
     );
-
-    console.log(res.data.items);
 
     dispatch({
       type: SEARCH_USERS,
@@ -113,7 +87,6 @@ const GithubState = (props) => {
         clearUsers,
         getUser,
         getUserRepos,
-        useEffect,
       }}
     >
       {props.children}
