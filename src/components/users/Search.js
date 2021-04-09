@@ -22,6 +22,7 @@ const Search = ({ setAlert }) => {
     <div>
       <form onSubmit={onSubmit} className='form'>
         <input
+          className='search-input'
           type='text'
           name='text'
           placeholder='Search Users...'

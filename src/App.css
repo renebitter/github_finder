@@ -312,6 +312,10 @@ input {
   margin: 1.2rem 0;
 }
 
+.search-input {
+  background-color: var(--light-color);
+}
+
 .form-text {
   display: block;
   margin-top: 0.3rem;
@@ -415,7 +419,7 @@ table th {
 
 .spinner {
   margin: auto;
-  border: 16px solid #f3f3f3;
+  border: 16px solid var(--light-color);
   border-top: 16px solid var(--primary-color);
   border-radius: 50%;
   width: 120px;
