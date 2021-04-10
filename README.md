@@ -4,7 +4,7 @@ This react project uses the github api to search for github users, shows a list 
 
 Click for live website:
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d4e38a2a-7ba1-4038-8ded-eb9680132e61/deploy-status)](https://app.netlify.com/sites/github-finder-54654564789731/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d4e38a2a-7ba1-4038-8ded-eb9680132e61/deploy-status)](https://github-finder-54654564789731.netlify.app/)
 
 ## Available Scripts
 
