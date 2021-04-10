@@ -26,7 +26,6 @@ const GithubState = (props) => {
   // Set initial Users
   useEffect(() => {
     const initialUsers = async () => {
-      console.log('initialUsers');
       setLoading();
 
       const res = await axios.get(
@@ -35,12 +34,10 @@ const GithubState = (props) => {
       &client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
       );
 
-      console.log(res.data.items);
-
-      // dispatch({
-      //   type: SET_INIT_USERS,
-      //   payload: res.data.items,
-      // });
+      dispatch({
+        type: SET_INIT_USERS,
+        payload: res.data,
+      });
     };
 
     initialUsers();
@@ -55,8 +52,6 @@ const GithubState = (props) => {
       client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}
       &client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
     );
-
-    console.log(res.data.items);
 
     dispatch({
       type: SEARCH_USERS,
