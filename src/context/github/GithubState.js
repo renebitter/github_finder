@@ -1,9 +1,8 @@
-import React, { useReducer, useEffect } from 'react';
+import React, { useReducer } from 'react';
 import axios from 'axios';
 import GithubContext from './githubContext';
 import GithubReducer from './githubReducer';
 import {
-  SET_INIT_USERS,
   SEARCH_USERS,
   GET_USER,
   CLEAR_USERS,
@@ -42,7 +41,7 @@ const GithubState = (props) => {
 
     initialUsers();
   }, []);
-
+  
   // Search Users
   const searchUsers = async (text) => {
     setLoading();
@@ -108,7 +107,6 @@ const GithubState = (props) => {
         clearUsers,
         getUser,
         getUserRepos,
-        useEffect,
       }}
     >
       {props.children}
