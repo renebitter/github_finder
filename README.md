@@ -6,6 +6,10 @@ Click for live website:
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d4e38a2a-7ba1-4038-8ded-eb9680132e61/deploy-status)](https://github-finder-54654564789731.netlify.app/)
 
+## Logic overview and structure
+
+![alt text](./public/logic.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
